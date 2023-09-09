@@ -8,8 +8,8 @@ export default function Page() {
   const [err, setErr] = useState({});
   const register = () => {
     const postData = {
-      username: "exampleUser",
-      email: "user1@example.com",
+      username: "example123User",
+      email: "user123@example.com",
       password: "123",
       // Add any other data you want to send
     };
@@ -33,7 +33,7 @@ export default function Page() {
   const login = () => {
     // Example data to send in the POST request
     const postData = {
-      email: "user1@example.com",
+      email: "user123@example.com",
       password: "123",
       // Add any other data you want to send
     };
@@ -163,19 +163,27 @@ export default function Page() {
         <Text style={styles.title}>Hello World</Text>
         <Text style={styles.subtitle}>This is the first page of your app.</Text>
         <Button title="Login" onPress={login} />
+        <View style={styles.buttonStyle} />
         <Button title="Register" onPress={register} />
+        <View style={styles.buttonStyle} />
         <Button title="Current" onPress={current} />
+        <View style={styles.buttonStyle} />
         <Button title="Get All Contacts" onPress={getAllContacts} />
+        <View style={styles.buttonStyle} />
         <Button title="Create Contact" onPress={createContact} />
+        <View style={styles.buttonStyle} />
         <Button
           title="Update Contact"
-          onPress={() => updateContact("64fc9aaeefd00244264eeffc")}
+          onPress={() => updateContact("64fc9d6fefd00244264ef010")}
         />
+        <View style={styles.buttonStyle} />
         <Button
           title="Delete Contact"
-          onPress={() => deleteContact("64fc87b5103a33cd66a07dd6")}
+          onPress={() => deleteContact("64fc9d6fefd00244264ef010")}
         />
       </View>
+      <Text>Response</Text>
+      <View style={styles.buttonStyle} />
       <Text>{JSON.stringify(data)}</Text>
     </View>
   );
@@ -187,7 +195,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 24,
     maxWidth: 960,
-    alignSelf:"center"
+    alignSelf: "center",
   },
   main: {
     flex: 1,
@@ -202,5 +210,8 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 36,
     color: "#38434D",
+  },
+  buttonStyle: {
+    margin: 1,
   },
 });
